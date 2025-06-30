@@ -1,0 +1,128 @@
+/* General Variables */
+:root {
+	--primary-red: #e50914;
+	--primary-red-hover: #f40612;
+	--primary-dark: #141414;
+	--input-bg: #333;
+	--input-border: #8c8c8c;
+	--text-light: #fff;
+	--text-gray: #8c8c8c;
+	--text-dark: #000;
+}
+
+/* Base Styles for Input and Select containers */
+.input-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+	width: 100%;
+}
+
+.input-container label {
+	font-size: 1rem;
+	color: var(--text-light);
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+
+/* Base style for text input, select, and search bar */
+.input-base {
+	background-color: var(--input-bg);
+	color: var(--text-light);
+	border: 1px solid var(--input-border);
+	border-radius: 4px;
+	padding: 1rem;
+	font-size: 1rem;
+	width: 100%;
+	box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.input-base:focus {
+	outline: none;
+	border-color: var(--primary-red);
+	box-shadow: 0 0 5px var(--primary-red);
+}
+
+/* For inputs with an icon */
+.input-with-icon {
+	padding-left: 3rem; /* Make space for the icon */
+}
+
+.input-icon {
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	transform: translateY(-50%);
+	color: var(--text-gray);
+}
+
+/* Specific styling for the custom Select arrow */
+.select-container select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238c8c8c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: right 1rem center;
+	background-size: 1em;
+}
+
+/* General Button Component */
+.button-base {
+	background-color: var(--primary-red);
+	color: var(--text-light);
+	border: none;
+	border-radius: 4px;
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+}
+
+.button-base:hover {
+	background-color: var(--primary-red-hover);
+}
+
+.button-icon {
+	margin-right: 0.5rem;
+}
+
+/* Search Bar Component */
+.search-bar-container {
+	position: relative;
+	width: 100%;
+}
+
+.search-bar-icon {
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--text-gray);
+}
+
+.search-bar-input {
+	background-color: var(--input-bg);
+	color: var(--text-light);
+	border: 1px solid var(--input-border);
+	border-radius: 50px; /* Fully rounded */
+	padding: 0.75rem 1.5rem 0.75rem 3rem; /* Top, Right, Bottom, Left */
+	font-size: 1rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.search-bar-input::placeholder {
+	color: var(--text-gray);
+}
+
+.search-bar-input:focus {
+	outline: none;
+	border-color: var(--primary-red);
+}
