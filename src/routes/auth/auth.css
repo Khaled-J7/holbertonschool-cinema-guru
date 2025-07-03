@@ -1,0 +1,90 @@
+/* Main container to center the form on the page */
+.auth-page-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: var(--primary-dark);
+}
+
+/* The form itself */
+.auth-form {
+	width: 100%;
+	max-width: 450px;
+	background-color: rgba(0, 0, 0, 0.75);
+	border-radius: 4px;
+	padding: 60px 68px 40px;
+	box-sizing: border-box;
+}
+
+/* Header for the Sign In / Sign Up toggles */
+.auth-header {
+	display: flex;
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.auth-header-btn {
+	flex: 1; /* Each button takes half the space */
+	padding: 1rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	color: #ccc; /* Inactive color */
+	border-bottom: 4px solid transparent;
+	transition: color 0.3s, border-color 0.3s;
+}
+
+.auth-header-btn.active {
+	color: var(--primary-red);
+	border-bottom-color: var(--primary-red);
+}
+
+/* Body of the form where inputs are rendered */
+.auth-body {
+	display: flex;
+	flex-direction: column;
+}
+
+.auth-title {
+	color: var(--text-light);
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+/* Override general input container to remove margin for a tighter look */
+.auth-form .input-container {
+	margin-bottom: 1.5rem;
+}
+
+/* Custom styling for auth inputs to remove the label and underline */
+.auth-form .input-container label {
+	display: none;
+}
+.auth-form .input-base {
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid var(--text-gray);
+	border-radius: 0;
+	padding-left: 2.5rem; /* Make space for icon */
+}
+.auth-form .input-base:focus {
+	box-shadow: none;
+	border-bottom-color: var(--primary-red);
+}
+.auth-form .input-icon {
+	left: 0;
+	color: var(--primary-red);
+}
+
+/* Styling for the submit button */
+.auth-submit-btn {
+	margin-top: 2rem;
+	padding: 1rem;
+	font-size: 1.1rem;
+}

@@ -1,0 +1,94 @@
+/* ========== MovieCard Styles ========== */
+.movie-card {
+  background-color: #181818;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card-image-container {
+  position: relative;
+}
+
+.movie-card-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.movie-card-actions {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.movie-card:hover .movie-card-actions {
+  opacity: 1;
+}
+
+.movie-card-action-btn {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.movie-card-action-btn:hover {
+  background-color: var(--primary-red);
+}
+
+.movie-card-info {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-light);
+}
+
+.movie-card-description {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+  flex-grow: 1;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+  /* Clamp the text to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.movie-card-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.movie-card-genre-tag {
+  background-color: var(--primary-red);
+  color: var(--text-light);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}

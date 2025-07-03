@@ -1,0 +1,52 @@
+/* Header container */
+.header-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+	background-color: #101010; /* Slightly lighter than the main background */
+	border-bottom: 1px solid #222;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* App title on the left */
+.header-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--primary-red);
+}
+
+/* Container for user info on the right */
+.header-user-info {
+	display: flex;
+	align-items: center;
+	gap: 1rem; /* Space between avatar, welcome text, and logout */
+}
+
+.header-user-avatar {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 2px solid var(--primary-red);
+	object-fit: cover;
+}
+
+.header-welcome-text {
+	font-size: 1rem;
+	font-weight: 500;
+}
+
+.header-logout {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	cursor: pointer;
+	color: var(--text-gray);
+	font-weight: bold;
+	transition: color 0.2s ease-in-out;
+}
+
+.header-logout:hover {
+	color: var(--primary-red);
+}
